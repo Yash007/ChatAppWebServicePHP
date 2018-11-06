@@ -8,7 +8,7 @@
     */
 
     define("WEB_URL","");
-    define("HOST_NAME","localhost");
+    define("DB_HOST","localhost");
     define("DB_NAME","chatapp");
     define("DB_USER","root");
     define("DB_PASSWORD","root");
