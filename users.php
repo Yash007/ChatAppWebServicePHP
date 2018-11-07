@@ -11,7 +11,7 @@
     }
 
     if(isset($_GET['updateUser']) && $_GET['updateUser'] == "true") {
-        $users -> updateUser();
+        $users -> updateUser($_GET['uId']);
     }
     
     class Users {
@@ -147,8 +147,61 @@
             echo json_encode($result);
         }
 
-        function updateUser()   {
+        function updateUser($uId)   {
+            $data = json_decode(file_get_contents("php://input"),true);
+            $uFirstName = $data['uFirstName'];
+            $uLastName = $data['uLastName'];
+            $uEmail = $data['uEmail'];
+            $uMobile = $data['uMobile'];
+            
+            $validate = true;
+            if(empty($uFirstName) || $uFirstName == " ")    {
+                $validate = false;
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "Firstname required!!";
+            }
 
+            if(empty($uLastName) || $uLastName == " ")    {
+                $validate = false;
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "Lastname required!!";
+            }
+
+            if(empty($uEmail) || $uEmail == " ")    {
+                $validate = false;
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "Email required!!";
+            }
+
+            if(empty($uMobile) || $uMobile == " ")    {
+                $validate = false;
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "Mobile number required!!";
+            }
+
+            if($validate == true) {
+                $sql = "update users set uFirstName='$uFirstName', uLastName='$uLastName', uEmail='$uEmail', uMobile='$uMobile' where uId='$uId'";
+                $res = mysqli_query($this->link,$sql) or die("Error in Signup User query");
+                $res = mysqli_affected_rows($this->link);
+    
+                if($res)    {
+                    $result = array();
+                    $result['result'] = "Success";
+                    $result['message'] = "User has been updated";
+                }
+                else    {
+                    $result = array();
+                    $result['result'] = "Error";
+                    $result['message'] = "User has not been updated.";
+                }
+            }
+
+            header("Content-type: Application/json");
+            echo json_encode($result);
         }
 
     }
