@@ -100,7 +100,51 @@
         }
 
         function loginUser()    {
+            $data = json_decode(file_get_contents("php://input"),true);
+            $uEmail = $data['uEmail'];
+            $uPassword = $data['uPassword'];
+            $validate = true;
 
+            if(empty($uEmail) || $uEmail == " ")    {
+                $validate = false;
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "Email required!!";
+            }
+
+            if(empty($uPassword) || $uPassword == " ")    {
+                $validate = false;
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "Password required!!";
+            }
+            
+            $uPassword = sha1($uPassword);
+            if($validate == true)   {
+                $sql = "select * from users where uEmail='$uEmail' and uHash='$uPassword'";
+                $res = mysqli_query($this->link,$sql) or die("Error in users login Query");
+                $row = mysqli_fetch_assoc($res);
+                $total = mysqli_num_rows($res);
+
+                if($total == 1) {
+                    $result = array();
+                    $result['result'] = "Success";
+                    $result['message'] = "User profile found";
+                    $result['profile'] = array();
+                    $result['profile']['uId'] = $row['uId'];
+                    $result['profile']['uFirstName'] = $row['uFirstName'];
+                    $result['profile']['uLastName'] = $row['uLastName'];
+                    $result['profile']['uEmail'] = $row['uEmail'];
+                    $result['profile']['uMobile'] = $row['uMobile'];
+                }
+                else    {
+                    $result = array();
+                    $result['result'] = "Error";
+                    $result['message'] = "Invalid email or password";
+                }
+            }
+            header("Content-type: Application/json");
+            echo json_encode($result);
         }
 
         function updateUser()   {
