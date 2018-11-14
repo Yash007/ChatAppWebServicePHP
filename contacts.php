@@ -64,11 +64,44 @@
         }
 
         function removeContact()    {
+            $data = json_decode(file_get_contents("php://input"),true);
+            $sourceId = $data['sourceId'];
+            $destinationId = $data['destinationId'];
+            $cId = $data['cId'];
 
+            $sql = "select count(cId) as total from contacts where cSourceId = '$sourceId' and cDestinationId = '$destinationId'";
+            $res = mysqli_query($this->link, $sql) or die("Error in Authenticating Contact Count!!".$sql);
+            $row = mysqli_fetch_assoc($res);
+            $total = $row['total'];
+            if($total ==  1)   {
+                //Add contact to your list
+                $sql = "delete from contacts where cSourceId='$sourceId' and cDestinationId='$destinationId' and cId='$cId'";
+                $res = mysqli_query($this->link,$sql) or die("Error in adding Contact query.".$sql);
+                $res = mysqli_affected_rows($this->link);
+                if($res)    {
+                    $result = array();
+                    $result['result'] = "Success";
+                    $result['message'] = "Contact has been removed successfully.";
+                }
+                else    {
+                    $result = array();
+                    $result['result'] = "Error";
+                    $result['message'] = "Error in removing user from contacts. Please try again!";
+                }
+            }
+            else    {
+                //Contact already Exists!!
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "User not exist in your contacts!";
+            }
+
+            header("Content-type: Application/json");
+            echo json_encode($result);
         }
 
         function listContacts() {
-
+            
         }
 
         function findContact()  {
