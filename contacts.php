@@ -101,7 +101,34 @@
         }
 
         function listContacts() {
-            
+            $sourceId = $_GET['sourceId'];
+
+            $sql = "select * from contacts right join users on contacts.cDestinationId = users.uId where cSourceId='$sourceId'";
+            $res = mysqli_query($this->link,$sql) or die("Error in Getting Contacts list!".$sql);
+            $total = mysqli_num_rows($res);
+            if($total == 0) {
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "User not exist in your contacts!";
+            }
+            else    {
+                $result = array();
+                $result['result'] = "Success";
+                $result['message'] = "Contacts are in Contacts objects!";
+                $result['contacts'] = array();
+                $i = 0;
+                while($row = mysqli_fetch_assoc($res))  {
+                    $result['contacts'][$i] = array();
+                    $result['contacts'][$i]['sourceId'] = $row['cSourceId'];
+                    $result['contacts'][$i]['destinationId'] = $row['cDestinationId'];
+                    $result['contacts'][$i]['cName'] = $row['uFirstName']." ".$row['uLastName'];
+                    $result['contacts'][$i]['cEmail'] = $row['uEmail'];
+                    $result['contacts'][$i]['cMobile'] = $row['uMobile'];
+                    $i++;
+                }
+            }
+            header("Content-type: Application/json");
+            echo json_encode($result);
         }
 
         function findContact()  {
