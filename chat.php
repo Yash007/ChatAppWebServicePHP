@@ -14,8 +14,8 @@
         $chat -> receiveChat();
     }
 
-    if(isset($_GET['findTotalMessage']) && $_GET['findTotalMessage'])   {
-        $chat -> findTotalMessage();
+    if(isset($_GET['findTotalMessages']) && $_GET['findTotalMessages'])   {
+        $chat -> findTotalMessages();
     }
 
     if(isset($_GET['encryptMessage']) && $_GET['encryptMessage'] == "true") {
@@ -78,8 +78,22 @@
 
         }
 
-        function findTotalMessage() {
+        function findTotalMessages() {
+            $data = json_decode(file_get_contents("php://input"),true);
+            $senderId = $data['senderId'];
+            $receiverId = $data['receiverId'];
 
+            $sql = "select count(mId) as total from messages where (mSenderId='$senderId' and mReceiverId = '$receiverId') or (mSenderId='$receiverId' and mReceiverId='$senderId')";
+            $res = mysqli_query($this->link,$sql) or die("Error in Counting Query for messages".$sql);
+            $row = mysqli_fetch_assoc($res);
+            $total = $row['total'];
+            $result = array();
+            $result['result'] = "Success";
+            $result['message'] = "Messages found successfully.";
+            $result['total'] = $total;
+
+            header("Content-type: Application/json");
+            echo json_encode($result);
         }
 
         function encryptMessage()   {
