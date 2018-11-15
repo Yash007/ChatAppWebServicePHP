@@ -70,7 +70,6 @@
                     $result['message'] = "Failed to send message! Please try again.";
                 }
             }
-
             header("Content-type: Application/json");
             echo json_encode($result);
         }
@@ -92,7 +91,34 @@
         }
 
         function loadChat() {
-            
+            $data = json_decode(file_get_contents("php://input"),true);
+            $senderId = $data['senderId'];
+            $receiverId = $data['receiverId'];
+
+            $sql = "select * from messages where (mSenderId='$senderId' and mReceiverId = '$receiverId') or (mSenderId='$receiverId' and mReceiverId='$senderId') ORDER BY mDate ASC, mTime ASC";
+            $res = mysqli_query($this->link, $sql) or die("Error in Load chat message Query".$sql);
+            $total = mysqli_num_rows($res);
+            if($total >= 1) {
+                $i = 0;
+                $result = array();
+                $result['result'] = "Success";
+                $result['message'] = "Chat are in chat object";
+                $result['chat'] = array();
+                while($row = mysqli_fetch_assoc($res))  {
+                    $result['chat'][$i]['message'] = $row['mMessage'];
+                    $result['chat'][$i]['date'] = $row['mDate'];
+                    $result['chat'][$i]['time'] = $row['mTime'];
+                    $result['chat'][$i]['sensLevel'] = $row['mSensitiveLevel'];
+                    $i++;
+                }
+            }
+            else    {
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "Start chat now!!";
+            }
+            header("Content-type: Application/json");
+            echo json_encode($result);
         }
     }
 ?>
