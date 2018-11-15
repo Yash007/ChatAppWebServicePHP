@@ -42,7 +42,57 @@
         }
 
         function chatList() {
-            
+            $data = json_decode(file_get_contents("php://input"),true);
+            $senderId = $data['senderId'];
+
+            $sql = "select *, MAX(mDateTime) as mDateTime from messages where mSenderId='$senderId' or mReceiverId='$senderId' group by mReceiverId";
+            $res = mysqli_query($this->link,$sql) or die("Error in getting chat list query".$sql);
+            $total = mysqli_num_rows($res);
+            if($total > 0)  {
+                $i = 0;
+                $result = array();
+                $result['result'] = "Success";
+                $result['message'] = "Chat list in Chat Object";
+                $result['chat'] = array();
+                while($row = mysqli_fetch_assoc($res))  {
+                    // $result['chat'][$i]['message'] = $row['mMessage'];
+                    // $result['chat'][$i]['date'] = $row['mDate'];
+                    // $result['chat'][$i]['time'] = $row['mTime'];
+
+                    
+                    
+                    if($row['mSenderId'] == $senderId)  {
+                        $receiverId = $row['mReceiverId'];
+                        $tempSql = "select uFirstName, uLastName from users where uId='$receiverId'";
+                        $tempSql1 = "select * from messages where mSenderId='$senderId' and mReceiverId='$receiverId' ORDER BY mId Desc";
+                    }
+                    else    {
+                        $receiverId = $row['mSenderId'];
+                        $tempSql = "select uFirstName, uLastName from users where uId='$receiverId'";
+                        $tempSql1 = "select * from messages where mSenderId='$receiverId' and mReceiverId='$senderId' ORDER BY mId Desc";
+                    }
+
+                    $tempRes = mysqli_query($this->link,$tempSql) or die("Error in getting User name".$tempSql);
+                    $tempRow = mysqli_fetch_assoc($tempRes);
+                    $result['chat'][$i]['name'] = $tempRow['uFirstName']. " " .$tempRow['uLastName'];
+
+                    $tempRes1 = mysqli_query($this->link,$tempSql1) or die("Error in getting User name".$tempSql1);
+                    $tempRow1 = mysqli_fetch_assoc($tempRes1);
+
+                    $result['chat'][$i]['message'] = $tempRow1['mMessage'];
+                    $result['chat'][$i]['date'] = $tempRow1['mDate'];
+                    $result['chat'][$i]['time'] = $tempRow1['mTime'];
+                    $result['chat'][$i]['receiverId'] = $receiverId;
+                    $i++;
+                }
+            }
+            else    {
+                $result = array();
+                $result['result'] = "Error";
+                $result['message'] = "Start Chat Now";
+            }
+            header("Content-type: Application/json");
+            echo json_encode($result);
         }
 
         function sendChat() {
@@ -51,12 +101,13 @@
             $receiverId = $data['receiverId'];
             $date = date("Y-m-d");
             $time = date("H:i:s");
+            $dateTime = date("Y-m-d H:i:s");
             $message = mysqli_real_escape_string($this->link,$data['message']);
             //$senLevel =  (AI code to find Sensitivity Level)
             $sensLevel = 0;
 
             if($message != NULL || $message != " " || !empty($message)) {
-                $sql = "insert into messages (mSenderId, mReceiverId, mDate, mTime, mMessage, mSensitiveLevel) values ('$senderId','$receiverId','$date','$time','$message','$sensLevel')";
+                $sql = "insert into messages (mSenderId, mReceiverId, mDate, mTime, mMessage, mSensitiveLevel, mDateTime) values ('$senderId','$receiverId','$date','$time','$message','$sensLevel','$dateTime')";
                 $res = mysqli_query($this->link, $sql) or die("Error in sending Message Query".$sql);
                 $res = mysqli_affected_rows($this->link);
                 if($res)    {
