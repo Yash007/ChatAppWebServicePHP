@@ -55,11 +55,6 @@
                 $result['message'] = "Chat list in Chat Object";
                 $result['chat'] = array();
                 while($row = mysqli_fetch_assoc($res))  {
-                    // $result['chat'][$i]['message'] = $row['mMessage'];
-                    // $result['chat'][$i]['date'] = $row['mDate'];
-                    // $result['chat'][$i]['time'] = $row['mTime'];
-
-                    
                     
                     if($row['mSenderId'] == $senderId)  {
                         $receiverId = $row['mReceiverId'];
