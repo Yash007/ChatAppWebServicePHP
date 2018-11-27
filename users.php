@@ -24,7 +24,7 @@
         }
 
         function signUpUser()   {
-            $data = json_decode(file_get_contents("php://input"),true);
+            $data = json_decode(file_get_contents('php://input'),true);
             $uFirstName = $data['uFirstName'];
             $uLastName = $data['uLastName'];
             $uEmail = $data['uEmail'];
@@ -92,7 +92,9 @@
             else    {
                 $result = array();
                 $result['result'] = "Error";
-                $result['message'] = "User has already registered!!";
+                if($total != 0) {
+                    $result['message'] = "User has already registered!!";
+                }
             }
 
             header("Content-type: Application/json");

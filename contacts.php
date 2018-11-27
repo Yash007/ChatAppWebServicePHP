@@ -102,7 +102,7 @@
 
         function listContacts() {
             $sourceId = $_GET['sourceId'];
-            $sql = "select * from contacts right join users on contacts.cDestinationId = users.uId where cSourceId='$sourceId'";
+            $sql = "select * from contacts right join users on contacts.cDestinationId = users.uId where cSourceId='$sourceId' ORDER BY users.uFirstName, users.uLastName ASC";
             $res = mysqli_query($this->link,$sql) or die("Error in Getting Contacts list!".$sql);
             $total = mysqli_num_rows($res);
             if($total == 0) {
@@ -123,6 +123,7 @@
                     $result['contacts'][$i]['cName'] = $row['uFirstName']." ".$row['uLastName'];
                     $result['contacts'][$i]['cEmail'] = $row['uEmail'];
                     $result['contacts'][$i]['cMobile'] = $row['uMobile'];
+                    $result['contacts'][$i]['cShortName'] = strtoupper(substr($row['uFirstName'],0,1).substr($row['uLastName'],0,1));
                     $i++;
                 }
             }
@@ -155,6 +156,7 @@
                         $result['contacts'][$i]['cName'] = $row['uFirstName']." ".$row['uLastName'];
                         $result['contacts'][$i]['cEmail'] = $row['uEmail'];
                         $result['contacts'][$i]['cMobile'] = $row['uMobile'];
+                        $result['contacts'][$i]['cShortName'] = strtoupper(substr($row['uFirstName'],0,1).substr($row['uLastName'],0,1));
                         $i++;
                     }
                 }

@@ -1,0 +1,81 @@
+[16-Nov-2018 01:10:39 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:10:42 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:10:44 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:12:12 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:12:45 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:12:47 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:12:57 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:14:56 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:15:03 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:15:10 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:15:12 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:15:49 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:15:53 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:15:59 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:16:24 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:16:30 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:16:32 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:20:14 UTC] PHP Notice:  Array to string conversion in /home/cptrivedi/public_html/chatapp/contacts.php on line 158
+[16-Nov-2018 01:20:14 UTC] PHP Notice:  Array to string conversion in /home/cptrivedi/public_html/chatapp/contacts.php on line 158
+[16-Nov-2018 01:20:14 UTC] PHP Notice:  Array to string conversion in /home/cptrivedi/public_html/chatapp/contacts.php on line 158
+[16-Nov-2018 01:20:14 UTC] PHP Notice:  Array to string conversion in /home/cptrivedi/public_html/chatapp/contacts.php on line 158
+[16-Nov-2018 01:21:32 UTC] PHP Warning:  str_split() expects at most 2 parameters, 3 given in /home/cptrivedi/public_html/chatapp/contacts.php on line 158
+[16-Nov-2018 01:21:32 UTC] PHP Warning:  str_split() expects at most 2 parameters, 3 given in /home/cptrivedi/public_html/chatapp/contacts.php on line 158
+[16-Nov-2018 01:21:32 UTC] PHP Warning:  str_split() expects at most 2 parameters, 3 given in /home/cptrivedi/public_html/chatapp/contacts.php on line 158
+[16-Nov-2018 01:21:32 UTC] PHP Warning:  str_split() expects at most 2 parameters, 3 given in /home/cptrivedi/public_html/chatapp/contacts.php on line 158
+[16-Nov-2018 01:26:11 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:32:17 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:32:23 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:32:28 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:32:30 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:35:55 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:36:06 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:36:06 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:36:40 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:46:50 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:48:46 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:50:25 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 01:52:08 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 134
+[16-Nov-2018 02:12:44 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:12:49 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:29:35 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:29:38 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:29:40 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:29:41 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:29:42 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:29:44 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:29:46 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:32:28 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 02:32:31 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 16:11:04 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 16:11:07 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 12:42:51 US/Eastern] PHP Notice:  Undefined variable: GET in /home/cptrivedi/public_html/chatapp/chat.php on line 46
+[16-Nov-2018 12:43:20 US/Eastern] PHP Notice:  Undefined variable: GET in /home/cptrivedi/public_html/chatapp/chat.php on line 46
+[16-Nov-2018 12:45:22 US/Eastern] PHP Notice:  Undefined variable: GET in /home/cptrivedi/public_html/chatapp/chat.php on line 46
+[16-Nov-2018 12:46:02 US/Eastern] PHP Notice:  Undefined variable: GET in /home/cptrivedi/public_html/chatapp/chat.php on line 46
+[16-Nov-2018 12:46:05 US/Eastern] PHP Notice:  Undefined variable: GET in /home/cptrivedi/public_html/chatapp/chat.php on line 46
+[16-Nov-2018 12:46:54 US/Eastern] PHP Notice:  Undefined variable: GET in /home/cptrivedi/public_html/chatapp/chat.php on line 46
+[17-Nov-2018 00:46:49 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[17-Nov-2018 00:46:51 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[17-Nov-2018 00:46:54 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[17-Nov-2018 00:46:55 UTC] PHP Notice:  Undefined index: sourceId in /home/cptrivedi/public_html/chatapp/contacts.php on line 135
+[16-Nov-2018 23:51:25 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:51:25 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:51:25 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:51:25 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:51:35 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:51:35 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:51:35 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:51:35 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:52:51 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:52:51 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:52:51 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:52:51 US/Eastern] PHP Notice:  Undefined index: senderId in /home/cptrivedi/public_html/chatapp/chat.php on line 183
+[16-Nov-2018 23:53:47 US/Eastern] PHP Notice:  Undefined index: uFirstName in /home/cptrivedi/public_html/chatapp/chat.php on line 188
+[16-Nov-2018 23:53:47 US/Eastern] PHP Notice:  Undefined index: uFirstName in /home/cptrivedi/public_html/chatapp/chat.php on line 188
+[16-Nov-2018 23:53:47 US/Eastern] PHP Notice:  Undefined index: uFirstName in /home/cptrivedi/public_html/chatapp/chat.php on line 188
+[16-Nov-2018 23:53:47 US/Eastern] PHP Notice:  Undefined index: uFirstName in /home/cptrivedi/public_html/chatapp/chat.php on line 188
+[16-Nov-2018 23:54:11 US/Eastern] PHP Notice:  Undefined index: uFirstName in /home/cptrivedi/public_html/chatapp/chat.php on line 188
+[16-Nov-2018 23:54:11 US/Eastern] PHP Notice:  Undefined index: uFirstName in /home/cptrivedi/public_html/chatapp/chat.php on line 188
+[16-Nov-2018 23:54:11 US/Eastern] PHP Notice:  Undefined index: uFirstName in /home/cptrivedi/public_html/chatapp/chat.php on line 188
+[16-Nov-2018 23:54:11 US/Eastern] PHP Notice:  Undefined index: uFirstName in /home/cptrivedi/public_html/chatapp/chat.php on line 188
